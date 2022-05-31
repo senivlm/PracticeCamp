@@ -3,7 +3,7 @@
 namespace Task03
 {
     class Vector
-    {
+    {// не потрібно використовувати властивість для колекцій. тим більше автоматичні!!!
         public int[] Arr { get; set; }
         public int this[int index]
         {
@@ -112,6 +112,7 @@ namespace Task03
                 if (Arr[i] != Arr[Arr.Length - 1 - i])
                     return false;
             }
+            //не в цьому методі
             Array.Reverse(Arr);
             return true;
         }
@@ -129,6 +130,7 @@ namespace Task03
         {
             Array.Reverse(Arr);
         }
+        // хотілося просто метод, який повертає 2 параметри(довжину та початковий індекс
         public Vector GetMaxSubString()
         {
             int begin = 0;
