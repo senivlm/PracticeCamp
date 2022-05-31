@@ -46,7 +46,7 @@ namespace Task03
                     return 0;
             }
             set
-            {
+            {// неконтрольовані індекси
                 matrix[i, j] = value;
             }
         }
@@ -58,6 +58,7 @@ namespace Task03
                 for (int j = 0; j < rows; j++)
                 {
                     if (j - i < 0 || j - i >= rows)
+                        //Cлід уникати
                         continue;
                     else
                     {
