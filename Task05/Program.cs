@@ -6,10 +6,10 @@ namespace Task05
     {
         static void Main(string[] args)
         {
-            Vector vect = new Vector(10);
+			Vector vect = new Vector(10);
             vect.RandomInitialization();
             vect.HeapSort();
             Console.WriteLine(vect);
-        }
+		}
     }
 }
