@@ -1,7 +1,8 @@
 ﻿using System;
 
 namespace Task04
-{
+{// Ваш номер 30.
+    Швидке сортування вдало реалізували. Молодець.
     enum Type
     {
         First,
