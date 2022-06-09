@@ -1,0 +1,5 @@
+﻿milk,25,-25,3
+milk,25,25,-1
+HighSort,chicken,Eggs,1,1,3
+HighSort,chicken,Eggs,1,1,3
+2022-07-05,Joghurt,1,2,3
