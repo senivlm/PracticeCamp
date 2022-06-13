@@ -10,7 +10,7 @@ namespace Task06
         public Sentence(string path)
         {
             Path = path;
-        }
+        }// злиття великого файлу в одну стрічку не завжди можливе.
         private string ReadText()
         {
             if (!File.Exists(Path))
