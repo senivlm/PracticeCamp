@@ -30,6 +30,7 @@ namespace Task06
                 meter.PrintUtilitiesInFile(@"..\..\..\utilities.csv", 100);
                 meter.PrintPeriodsInFile(@"..\..\..\periods.csv");
             }
+            //а не знайдений файл
             catch (ArgumentException e)
             {
                 Console.WriteLine(e.Message);
