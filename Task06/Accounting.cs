@@ -14,6 +14,7 @@ namespace Task06
         public int InputMeter { get; set; }
         public int OutputMeter { get; set; }
         public DateTime[] DatesMeter;
+        //Порушені принципи Solid. Неправильне проектування. Можу усно проаналізувати.
         private readonly List<Accounting> accountings;
         public Accounting(int number, string surname, int inputMeter, int outputMeter, 
             params DateTime[] datesMeter)
