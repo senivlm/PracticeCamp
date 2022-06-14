@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="1\products\**" />
+    <EmbeddedResource Remove="1\products\**" />
+    <None Remove="1\products\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="3\" />
+    <Folder Include="additional task\" />
+  </ItemGroup>
+
+</Project>

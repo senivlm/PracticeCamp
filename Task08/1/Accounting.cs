@@ -4,11 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Task06
+namespace Task08
 {
     class Accounting
     {
-        private readonly List<Account> accountings;
+        private List<Account> accountings;   
         public Accounting(in List<Account> accountings)
         {
             this.accountings = accountings;
@@ -105,6 +105,31 @@ namespace Task06
                 streamWriter.WriteLine($"Flat #{item.Key} : {item.Value} days");
             }
             streamWriter.Close();
+        }
+        public static Accounting operator +(in Accounting lhs, in Accounting rhs)
+        {
+            if(lhs == null)
+            {
+                return rhs;
+            }
+            if(rhs == null)
+            {
+                return lhs;
+            }
+            return new Accounting(lhs.accountings.Union(rhs.accountings).ToList());
+        }
+        public static Accounting operator -(Accounting lhs, in Accounting rhs)
+        {
+            if (lhs == null)
+            {
+                return null;
+            }
+            if (rhs == null)
+            {
+                return lhs;
+            }
+            lhs.accountings = lhs.accountings.Except(rhs.accountings).ToList();
+            return lhs;
         }
         public override bool Equals(object obj)
         {

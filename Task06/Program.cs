@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 
 namespace Task06
 {
@@ -29,6 +28,8 @@ namespace Task06
                 meter.PrintDataInFile(@"..\..\..\data.csv");
                 meter.PrintUtilitiesInFile(@"..\..\..\utilities.csv", 100);
                 meter.PrintPeriodsInFile(@"..\..\..\periods.csv");
+                
+
             }
             catch (ArgumentException e)
             {
