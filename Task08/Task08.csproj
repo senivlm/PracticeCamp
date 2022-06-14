@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="3\" />
-    <Folder Include="additional task\" />
   </ItemGroup>
 
 </Project>
