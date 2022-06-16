@@ -10,6 +10,9 @@ namespace Task05
         {
             try
             {
+                //I also added version of merge sort from the internet changed a bit for comparison 
+                //Method ToString() is used withoud StringBuilder here, as it's inefficient for small arrays
+                //For universal tasks I would use StringBuilder
                 Vector vect = new Vector(10);
                 vect.RandomInitialization();
                 vect.HeapSort();
@@ -34,10 +37,6 @@ namespace Task05
                 timer.Stop();
                 Console.WriteLine(vectMergeCheck);
                 Console.WriteLine($"Time taken for optimal merge sort: {timer.Elapsed.TotalMilliseconds}");
-
-                Vector check1 = new Vector(new int[] { 1, 2, 3 });
-                Vector check2 = new Vector(new int[] { 1, 3, 3 });
-                Console.WriteLine(check1 == check2);
             }
             catch (FileNotFoundException e)
             {
