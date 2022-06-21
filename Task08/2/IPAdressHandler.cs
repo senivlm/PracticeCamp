@@ -27,7 +27,7 @@ namespace Task08
                         iPAdresses.Add(new IPAdress(line[0], TimeSpan.Parse(line[1]), line[2].ToLower()));
                     }
                     catch (ArgumentNullException)
-                    {
+                    {// Ця прив'язка не дасть зробити клас модельним.
                         Console.WriteLine("Error with timespan parsing occured");
                     }
                     catch (ArgumentException)
