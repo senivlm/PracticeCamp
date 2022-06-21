@@ -68,6 +68,7 @@ namespace Task08
                 }
             }
         }
+        // І чому мені назва методу не подобається. Обманщик)))
         public void Close()
         {
             Logs.Clear();
