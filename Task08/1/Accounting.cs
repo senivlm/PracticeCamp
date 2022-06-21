@@ -107,7 +107,7 @@ namespace Task08
             streamWriter.Close();
         }
         public static Accounting operator +(in Accounting lhs, in Accounting rhs)
-        {
+        {//плутаєте порожній і не створений. Показати в групі
             if(lhs == null)
             {
                 return rhs;
