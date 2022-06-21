@@ -1,0 +1,24 @@
+﻿World's Best Lasagna
+Asparagus,100
+Apples,200
+Bananas,300
+
+Easy Meatloaf
+Beans,100
+Broccoli,200
+Bananas,300
+
+Slow Cooker Texas Pulled Pork
+Beef,100
+Bananas,200
+Broccoli,300
+
+Italian Baked Meatballs
+Bananas,150
+Beets,120
+Broccoli,135
+
+5-Ingredient Mexican Casserole
+Bananas,100
+Beans,300
+Kiwi,500
