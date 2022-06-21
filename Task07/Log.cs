@@ -45,6 +45,7 @@ namespace Task07
             }
             return logs;
         }
+        //винести в клас валідації
         public void CorrectLine(string dateAfter)
         {
             List<string> logs = ShowByDate(ParseDate(dateAfter));
