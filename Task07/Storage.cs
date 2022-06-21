@@ -35,6 +35,7 @@ namespace Task07
             while (!File.Exists($"..\\..\\..\\{file}"));
             return $"..\\..\\..\\{file}";
         }
+        // rhfot було зробити метод для довільних стрічок, а також винести валідацію окремої стрічки в інший клас
         private void Parse()
         {
             string[] plainText = File.ReadAllLines(FindFile());
