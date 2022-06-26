@@ -4,6 +4,12 @@ using System.Collections;
 
 namespace Task10
 {
+
+    public enum Direction
+    {
+        Right,
+        Down
+    }
     public class Matrix : IEnumerable<int>
     {
         private int rows;
@@ -29,15 +35,18 @@ namespace Task10
         }
         public Matrix(in int rows, in int columns)
         {
-            Rows = rows;
-            Columns = columns;
-            matrix = new int[Rows, Columns];
-            int count = 1;
-            for (int i = 0; i < Rows; i++)
+            if (rows > 0 && columns > 0)
             {
-                for (int j = 0; j < Columns; j++)
+                Rows = rows;
+                Columns = columns;
+                matrix = new int[Rows, Columns];
+                int count = 1;
+                for (int i = 0; i < Rows; i++)
                 {
-                    matrix[i, j] = count++;
+                    for (int j = 0; j < Columns; j++)
+                    {
+                        matrix[i, j] = count++;
+                    }
                 }
             }
         }
@@ -56,24 +65,6 @@ namespace Task10
             set
             {
                 matrix[i, j] = value;
-            }
-        }
-        public void GetHorizontalSnake()
-        {
-            int direction = 0;
-            int count = 1;
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    if (direction == 0)
-                        matrix[i, j] = count;
-                    else
-                        matrix[i, matrix.GetLength(1) - j - 1] = count;
-                    count++;
-                }
-                direction = (direction + 1) % 2;
-
             }
         }
         public static bool operator ==(in Matrix first, in Matrix second)
@@ -99,6 +90,87 @@ namespace Task10
             }
             return false;
         }
+        public IEnumerator<int> GetEnumerator()
+        {
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Columns; j++)
+                {
+                    yield return matrix[i, j];
+                }
+            }
+        }
+        public IEnumerable<int> GetHorizontalSnakeEnumerator()
+        {
+            int direction = 0;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (direction == 0)
+                        yield return matrix[i, j];
+                    else
+                        yield return matrix[i, matrix.GetLength(1) - j - 1];
+                }
+                direction = (direction + 1) % 2;
+            }
+        }
+        private IEnumerable<int> GetDiagonalRightOrderEnumerator()
+        {
+            for (int i = 1 - Rows; i <= Rows - 1; i++)
+            {
+                for (int j = 0; j < Rows; j++)
+                {
+                    if (j - i < 0 || j - i >= Rows)
+                        continue;
+                    else
+                    {
+                        if ((i % 2) != 0)
+                            yield return matrix[j, Rows - 1 - j + i];
+                        else
+                            yield return matrix[Rows - 1 - j + i, j];
+                    }
+                }
+            }
+        }
+        private IEnumerable<int> GetDiagonalDownOrderEnumerator()
+        {
+            for (int i = 1 - Rows; i <= Rows - 1; i++)
+            {
+                for (int j = 0; j < Rows; j++)
+                {
+                    if (j - i < 0 || j - i >= Rows)
+                        continue;
+                    else
+                    {
+                        if ((i % 2) == 0)
+                            yield return matrix[j, Rows - 1 - j + i];
+                        else
+                            yield return matrix[Rows - 1 - j + i, j];
+                    }
+                }
+            }
+        }
+        public IEnumerable<int> GetDiagonalSnakeEnumerator(in Direction direction)
+        {
+            if (Rows == Columns)
+            {
+                if (direction == Direction.Right)
+                {
+                    return GetDiagonalRightOrderEnumerator();
+                }
+                else if (direction == Direction.Down)
+                {
+                    return GetDiagonalDownOrderEnumerator();
+                }
+            }
+            return GetHorizontalSnakeEnumerator(); 
+            // because I don't want to use System to throw an exception or return null to save memory, so it's a funny option
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
         public override int GetHashCode()
         {
             return ToString().GetHashCode();
@@ -115,28 +187,6 @@ namespace Task10
                 sb.Append("\n");
             }
             return sb.ToString();
-        }
-        public IEnumerator<int> GetEnumerator()
-        {
-            int direction = 0;
-            int count = 1;
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    if (direction == 0)
-                        yield return matrix[i, j];
-                    else
-                        yield return matrix[i, matrix.GetLength(1) - j - 1];
-                    count++;
-                }
-                direction = (direction + 1) % 2;
-
-            }
-        }
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
         ~Matrix()
         { }
