@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task09", "Task09\Task09.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailChecker", "EmailChecker\EmailChecker.csproj", "{849C67AC-80E2-46F5-92D8-6324A351BBE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task10", "Task10\Task10.csproj", "{58201337-76D9-41BC-B062-3B49555DA059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task10", "Task10\Task10.csproj", "{58201337-76D9-41BC-B062-3B49555DA059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task11", "task11\Task11.csproj", "{50ED9FB2-426F-4B2C-907B-73EE01E85FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task12", "Task12\Task12.csproj", "{1FC957EA-1743-464C-8765-8ADC6E56FA73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{58201337-76D9-41BC-B062-3B49555DA059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58201337-76D9-41BC-B062-3B49555DA059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58201337-76D9-41BC-B062-3B49555DA059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50ED9FB2-426F-4B2C-907B-73EE01E85FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50ED9FB2-426F-4B2C-907B-73EE01E85FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50ED9FB2-426F-4B2C-907B-73EE01E85FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50ED9FB2-426F-4B2C-907B-73EE01E85FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
