@@ -10,7 +10,7 @@ namespace Task11
 
             list.Add(1);
             list.Add("string");
-            list.Add('c');
+            list.Add('a');
             list.Add(1.57);
             list.Add(true);
 
