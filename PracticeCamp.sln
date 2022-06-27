@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailChecker", "EmailChecke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task10", "Task10\Task10.csproj", "{58201337-76D9-41BC-B062-3B49555DA059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task12", "Task12\Task12.csproj", "{1FC957EA-1743-464C-8765-8ADC6E56FA73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task12", "Task12\Task12.csproj", "{1FC957EA-1743-464C-8765-8ADC6E56FA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task11", "Task11\Task11.csproj", "{68469A7D-AB8F-4C8F-9315-EB14AF0A166B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FC957EA-1743-464C-8765-8ADC6E56FA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68469A7D-AB8F-4C8F-9315-EB14AF0A166B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68469A7D-AB8F-4C8F-9315-EB14AF0A166B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68469A7D-AB8F-4C8F-9315-EB14AF0A166B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68469A7D-AB8F-4C8F-9315-EB14AF0A166B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
