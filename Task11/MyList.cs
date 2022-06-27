@@ -77,7 +77,7 @@ namespace Task11
         }
         public int BinarySearch(T item, IComparer<T> comparer)
         {
-            if(comparer is null)
+            if (comparer is null)
             {
                 throw new InvalidOperationException();
             }
@@ -94,15 +94,15 @@ namespace Task11
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            if(array is null)
+            if (array is null)
             {
                 throw new ArgumentNullException();
             }
-            else if(arrayIndex < 0)
+            else if (arrayIndex < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }
-            else if(list.Count() > array.Length - arrayIndex)
+            else if (list.Count() > array.Length - arrayIndex)
             {
                 throw new ArgumentException();
             }
@@ -167,5 +167,3 @@ namespace Task11
         }
     }
 }
-
-
