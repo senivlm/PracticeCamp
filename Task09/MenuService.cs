@@ -40,6 +40,7 @@ namespace Task09
             }
             return true;
         }
+        //Не дуже  добре об'єднувати 2 різні складові в один метод(тобто формування текстової інформації та обчислення суми. Якщо Вам треба тільки одна складова, то отримаєте надлишковість.)
         static public string GetDishes(in Menu menu, 
                                        in PriceList priceList, 
                                        in Course course,
