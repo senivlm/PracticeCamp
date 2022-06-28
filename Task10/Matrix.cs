@@ -100,6 +100,7 @@ namespace Task10
                 }
             }
         }
+        // " є проблема. Подивимось на занятті
         public IEnumerable<int> GetHorizontalSnakeEnumerator()
         {
             int direction = 0;
