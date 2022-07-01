@@ -4,7 +4,6 @@ using System.Collections;
 
 namespace Task10
 {
-
     public enum Direction
     {
         Right,
