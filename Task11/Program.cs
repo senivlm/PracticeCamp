@@ -3,9 +3,9 @@
 namespace Task11
 {
     class Program
-    {
+    {// Де інша частина завдання?
         static void Main(string[] args)
-        {
+        {// не показовий  1 тест.
             MyList<object> list = new MyList<object>();
 
             list.Add(1);
