@@ -9,7 +9,7 @@ namespace Task11
     class MyList<T>
     {
         private readonly List<T> list;
-
+//Порушили інкапсуляцію колекції
         public List<T> List => list;
 
         public MyList()
@@ -23,7 +23,7 @@ namespace Task11
         public MyList(int capacity) : this()
         {
             if (capacity < 0)
-            {
+            {// Не чіткий виняток.
                 throw new ArgumentOutOfRangeException();
             }
             list.Capacity = capacity;
