@@ -16,6 +16,7 @@ namespace Task12
         public Storage()
         {
             products = new List<Buy>();
+            // Обробника подій треба визначати на рівні користувача класу!!! Інакше немає змісту використовувати механізм подій!!!!Мусим обговорити детально. Дуже важливо!
             ExpirationDatePassed = Remove;
             ExpirationDatePassed += Write;
         }
