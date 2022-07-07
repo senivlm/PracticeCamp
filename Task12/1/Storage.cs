@@ -7,7 +7,7 @@ using System.Linq;
 namespace Task12
 {
     public class Storage
-    {
+    {// З проєктуванням біда. Є суттєві порушення принципів Solid і немає абстракції!!!!
         public event ExpirationDate ExpirationDatePassed;
 
         private readonly List<Buy> products;
